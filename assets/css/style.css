@@ -1,171 +1,210 @@
 :root {
-  --color-white: #fff;
-  --color-gray-100: #181818;
-  --color-gray-300: #323232;
+    --color-white: #fff;
+    --color-gray-100: #181818;
+    --color-gray-300: #323232;
 }
 
 * {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  font-family: "Lexend", sans-serif;
-  text-decoration: none;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Lexend", sans-serif;
+    text-decoration: none;
 }
 
-.navbar .home,
+.navbar,
+.home,
 section {
-  max-width: 1280px;
-  margin: auto;
+    max-width: 1280px;
+    margin: auto;
 }
 
 section {
-  padding: 60px 0px;
-  max-width: 60px 0px;
+    max-width: 1096px;
+    padding: 60px 0px;
 }
+
+body {
+    background-color: #F5F4F9;
+}
+
 
 header {
-  background-image: url(../img/bg.svg);
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center;
+    background-image: url(../img/bg.svg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
 
-  & .navbar {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 16px 0;
+    & .navbar {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 16px 0;
 
-    & nav {
-      display: flex;
-      gap: 40px;
+        & nav {
+            display: flex;
+            gap: 40px;
 
-      & a {
-        color: #efefefb2;
-        font-size: 18px;
-      }
+            & a {
+                color: #efefefb2;
+                font-size: 18px;
+            }
 
-      & a:first-child {
-        color: var(--color-white);
-      }
+            & a:first-child {
+                color: var(--color-white);
+            }
+
+        }
+
+        & .btns {
+            display: flex;
+            gap: 16px;
+
+            & button {
+                padding: 12px 12px;
+                border-radius: 8px;
+                border: none;
+                background: #3b44f6;
+                color: var(--color-white);
+                cursor: pointer;
+            }
+
+            & button:last-child {
+                background-color: transparent;
+                border: var(--color-white) 1px solid;
+            }
+
+        }
     }
 
-    & .btns {
-      display: flex;
-      gap: 16px;
+    & .home {
+        margin-top: 114px;
+        height: calc(100vh - 188px);
 
-      & button {
-        padding: 12px 16px;
-        border-radius: 8px;
-        border: none;
-        background-color: #3b44f6;
-        color: var(--color-white);
-      }
+        & .title {
+            margin-bottom: 64px;
+            color: var(--color-white);
 
-      & button:last-child {
-        background: transparent;
-        border: 1px solid;
-      }
-    }
-  }
+            & h1 {
+                font-size: 48px;
+                margin-bottom: 26px;
+            }
 
-  & .home {
-    margin-bottom: 64px;
-    color: var(--color-white);
+            & p {
+                font-size: 24px;
+                max-width: 417px;
+            }
+        }
 
-    height: calc(100vh - 176px);
-
-    & title {
-      margin-bottom: 64px;
-      color: var(--color-white);
-    }
-
-    & h1 {
-      margin-bottom: 26px;
-      color: var(--color-white);
-      font-size: 48px;
+        & button {
+            padding: 16px 32px;
+            border-radius: 8px;
+            border: none;
+            background: #3b44f6;
+            color: var(--color-white);
+            cursor: pointer;
+        }
     }
 
-    & p {
-      font-size: 24px;
-      margin-bottom: 64px;
-    }
-
-    & button {
-      padding: 16px 32px;
-      border-radius: 8px;
-      border: none;
-      background: #3b44f6;
-      color: #fff;
-      cursor: pointer;
-    }
-  }
 }
 
 main {
-  & .bigode-store {
-    display: flex;
-    flex-direction: column;
-    gap: 60px;
 
-    & .title,
-    .cards {
-      margin: auto;
-      text-align: center;
-    }
-
-    & .cards {
-      display: flex;
-      gap: 83px;
-    }
-  }
-
-  & .games-genres {
-    display: flex;
-    flex-direction: column;
-    gap: 24px;
-
-    & .title {
-      max-width: 1096px;
-      justify-content: space-between;
-      align-items: center;
-    }
-
-    & .cards {
-      display: flex;
-      gap: 10px;
-
-      & .card {
-        width: 133px;
-        height: 100px;
-        background-image: url();
-        background-repeat: no-repeat;
-        background-size: cover;
-        border-radius: 8px;
-        color: #fff;
-        font-family: 20px;
+    & .bigode-store {
         display: flex;
-        justify-content: center;
-        align-items: center;
+        flex-direction: column;
+        gap: 60px;
 
-        filter: grayscale(0.5);
-      }
+        & .title,
+        .cards {
+            margin: auto;
+            text-align: center;
+        }
 
-      & .card:nth-child(1) {
-        background-image: url(../img/bg1-image.png);
-      }
+        & .cards {
+            display: flex;
+            gap: 83px;
+        }
+
     }
-  }
 
-  & .best-seller-games {
-
-    & .cards {
-
+    & .games-genres {
         display: flex;
+        gap: 24px;
+        flex-direction: column;
 
-         & .card {
+        & .title {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: auto;
+
+            & p {
+                color: #3B44F6;
+            }
+        }
+
+        & .cards {
+            display: flex;
+            gap: 16px;
+
+            & .card {
+                width: 199px;
+                height: 199px;
+                background-repeat: no-repeat;
+                background-size: cover;
+                background-position: center;
+                border-radius: 8px;
+                color: #FFF;
+                font-family: 20px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+
+                /* filter: grayscale(1); */
+            }
+
+            & .card:nth-child(1) {
+                background-image: url(../img/stardew-valley.png);
+            }
+
+            & .card:nth-child(2) {
+                background-image: url(../img/halo.png);
+            }
+
+            & .card:nth-child(3) {
+                background-image: url(../img/cyberpunk.png);
+            }
+
+            & .card:nth-child(4) {
+                background-image: url(../img/valiant.png);
+            }
+
+            & .card:nth-child(5) {
+                background-image: url(../img/witcher.png);
+            }
+
+            & .card:nth-child(6) {
+                background-image: url(../img/fifa22.png);
+            }
+        }
+
+    }
+
+    & .best-seller-games {
+
+        & h2 {
+            margin-bottom: 24px;
+        }
+
+        & .cards {
+            display: flex;
+            gap: 16px;
+        }
+
+        & .card {
             width: 262px;
             background-color: var(--color-white);
-            box-shadow: 0px 8px 10px #a4a4;
+            box-shadow: 0px 8px 10px #a4a4a41f;
             border: 0.3px solid #d1d1d1;
             border-radius: 8px;
 
@@ -174,72 +213,290 @@ main {
             gap: 15px;
             padding: 16px 16px 24px 16px;
 
-            & img {
+            img {
                 width: 100%;
             }
 
-            & .conteudo {
+            .conteudo {
                 display: flex;
                 flex-direction: column;
                 gap: 15px;
 
-                & h2 {
-                    margin-bottom: 20px;
+                & h3 {
+                    font-size: 20px;
                 }
 
                 & .preco {
                     display: flex;
                     justify-content: space-between;
 
-                    & p {
-                        color: #3b44f6;
-                    }
+                }
 
-                    & .desconto {
-                        display: flex;
-                        gap: 6px;
-                        background-color: #f5f4f9;
-                        border: #d1d1d1 0.3px solid;
+                & p {
+                    color: #3B44F6;
+                }
+
+                & .desconto {
+                    display: flex;
+                    gap: 6px;
+                    background-color: #f5f4f9;
+                    border: #d1d1d1 0.3px solid;
+                    border-radius: 4px;
+                    padding-right: 10px;
+
+                    & p:first-child {
+                        background-color: #fc326f4b;
+                        color: #FC326F;
+                        padding: 3px;
                         border-radius: 4px;
-                        padding-right: 10px;
-
-                        & p:first-child {
-                            background-color: #FC326F69;
-                            color: #FC326F;
-                            padding: 3px;
-                            border-radius: 4px;
-                            font-size: 12px;
-                        }
-
-                        & p:last-child {
-                            color: #7D7D7D;
-                            text-decoration: line-through;
-                        }
-                        }
+                        font-size: 12px;
                     }
+
+                    & p:last-child {
+                        color: #7d7d7d;
+                        text-decoration: line-through;
+                    }
+
                 }
             }
-         }
-    }
-}
-
-& .popular-games {
-
-    & .cards {
-      display: flex;
+        }
     }
 
-    & .card {
-      width: 262px;
-      background-color: var(--color-white);
-      box-shadow: 0px 8px 10px #a4a4;
-      border: 0.3px solid #d1d1d1;
-      border-radius: 8px;
+    .popular-games {
 
-      display: flex;
-      flex-direction: column;
-      gap: 15px;
-      padding: 16px 16px 24px 16px;
+        & .title {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 24px;
 
+            & p:last-child {
+                color: #3B44F6;
+            }
+        }
+
+        & .cards {
+            display: flex;
+            gap: 16px;
+            flex-wrap: wrap;
+        }
+
+        & .card {
+            width: 262px;
+            background-color: var(--color-white);
+            box-shadow: 0px 8px 10px #a4a4a41f;
+            border: 0.3px solid #d1d1d1;
+            border-radius: 8px;
+
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+            padding: 16px 16px 24px 16px;
+
+            img {
+                width: 100%;
+            }
+
+            .conteudo {
+                display: flex;
+                flex-direction: column;
+                gap: 15px;
+
+                & h3 {
+                    font-size: 20px;
+                }
+
+                & .preco {
+                    display: flex;
+                    justify-content: space-between;
+
+                }
+
+                & p {
+                    color: #3B44F6;
+                }
+
+                & .desconto {
+                    display: flex;
+                    gap: 6px;
+                    background-color: #f5f4f9;
+                    border: #d1d1d1 0.3px solid;
+                    border-radius: 4px;
+                    padding-right: 10px;
+
+                    & p:first-child {
+                        background-color: #fc326f4b;
+                        color: #FC326F;
+                        padding: 3px;
+                        border-radius: 4px;
+                        font-size: 12px;
+                    }
+
+                    & p:last-child {
+                        color: #7d7d7d;
+                        text-decoration: line-through;
+                    }
+
+                }
+            }
+        }
     }
+
+    .coming-soon {
+        background-color: #111;
+        padding: 40px 20px;
+        color: white;
+    }
+
+    .coming-soon h2 {
+        font-size: 24px;
+        margin-bottom: 20px;
+    }
+
+    .games-grid {
+        display: grid;
+        grid-template-columns: 2fr 1fr;
+        gap: 20px;
+        grid-auto-rows: minmax(250px, auto);
+    }
+
+    .game-card {
+        position: relative;
+        border-radius: 10px;
+        overflow: hidden;
+    }
+
+    .game-card img {
+        background-size: cover;
+        background-position: center;
+        border-radius: 10px;
+        position: relative;
+        overflow: hidden;
+        display: flex;
+        align-items: flex-end;
+    }
+
+    .game-card.large {
+        grid-column: span 1;
+        height: 100%;
+    }
+
+    .game-info {
+        position: absolute;
+        bottom: 0;
+        width: 100%;
+        padding: 15px;
+        background: rgba(0, 0, 0, 0.6);
+    }
+
+    .game-info h3 {
+        margin: 0;
+        font-size: 18px;
+    }
+
+    .game-info button {
+        margin-top: 10px;
+        padding: 6px 16px;
+        background: #fff;
+        color: #000;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        font-weight: bold;
+    }
+
+    /* Testimonials */
+    .testimonials {
+        background: #f5f3ff;
+        text-align: center;
+        padding: 60px 20px;
+    }
+
+    .testimonials h2 {
+        font-size: 24px;
+        margin-bottom: 10px;
+    }
+
+    .testimonials p {
+        max-width: 600px;
+        margin: 0 auto 40px;
+    }
+
+    .testimonial-cards {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 20px;
+    }
+
+    .testimonial-card {
+        background: white;
+        border-radius: 10px;
+        padding: 20px;
+        width: 280px;
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        text-align: center;
+    }
+
+    .testimonial-card img {
+        width: 60px;
+        height: 60px;
+        border-radius: 50%;
+    }
+
+    .stars {
+        color: gold;
+        margin: 5px 0;
+    }
+
+    /* Footer */
+    .site-footer {
+        background: #111;
+        color: white;
+        padding: 40px 20px;
+    }
+
+    .footer-content {
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+    }
+
+    .brand {
+        font-size: 20px;
+        font-weight: bold;
+    }
+
+    .brand span {
+        color: #7f5af0;
+    }
+
+    .footer-columns {
+        display: flex;
+        gap: 40px;
+    }
+
+    .footer-columns div h4 {
+        margin-bottom: 10px;
+    }
+
+    .footer-columns ul {
+        list-style: none;
+        padding: 0;
+    }
+
+    .footer-columns li {
+        margin-bottom: 8px;
+    }
+
+    .social-icons i {
+        font-size: 18px;
+        margin-right: 10px;
+    }
+
+    footer p {
+        text-align: center;
+        margin-top: 20px;
+        color: #aaa;
+    }
+
 }
